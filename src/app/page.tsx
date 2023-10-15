@@ -17,7 +17,7 @@ export default async function Home() {
   const post = await getPosts();
 
   const res = await fetch(`${process.env.ENVIRONMENT}/api/post/get`, {
-    cache: "force-cache",
+    cache: "no-cache",
   });
   const data = await res.json();
   console.log(data);
