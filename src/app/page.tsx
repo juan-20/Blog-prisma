@@ -1,7 +1,5 @@
-import Navbar from "@/components/Navbar";
 import PostCard from "@/components/PostCard";
 import { db } from "@/lib/db";
-import Image from "next/image";
 
 async function getPosts() {
   const response = await db.post.findMany({
@@ -17,6 +15,11 @@ async function getPosts() {
 
 export default async function Home() {
   const post = await getPosts();
+
+  const res = await fetch(`${process.env.ENVIRONMENT}/api/post/get`);
+  const data = await res.json();
+  console.log(data);
+
   return (
     <main className="grid items-center justify-center md:grid-cols-2 mt-10 gap-4">
       {post.map((post) => (
