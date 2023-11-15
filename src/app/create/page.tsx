@@ -30,7 +30,7 @@ export default function Create() {
   return (
     <div>
       <BackButton />
-      <h1 className="text-2xl">Adicionar produto</h1>
+      <h1 className="text-2xl">Adicionar post</h1>
       <FormPost submit={handleCreatePost} />
     </div>
   );

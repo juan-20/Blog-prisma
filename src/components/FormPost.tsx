@@ -70,16 +70,7 @@ export const FormPost: FC<FormPostProps> = ({
         </select>
       )}
       <button type="submit" className="btn btn-primary w-full max-w-lg">
-        {!isLoadingEdit && (
-          <span className="loading loading-spinner loading-md"></span>
-        )}
-        {isEditing
-          ? isLoadingEdit
-            ? "Update"
-            : "Updating..."
-          : isLoadingEdit
-          ? "Creating..."
-          : "create"}
+        Salvar
       </button>
     </form>
   );
